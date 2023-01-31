@@ -1,0 +1,35 @@
+.form_cont{
+    width: 470.28px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.step_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 37.74px;
+}
+.bars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13.76px;
+}
+.bars div:nth-child(1){
+    width: 88px;
+height: 7px;
+
+background: linear-gradient(89.84deg, #9C3BE6 0.85%, #AF4FBD 99.88%);
+border-radius: 3.66912px;
+
+}
+.bar{
+    width: 87px;
+height: 7px;
+
+background: rgba(244, 242, 242, 0.12);
+border-radius: 3.66912px;
+}
