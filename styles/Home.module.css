@@ -72,7 +72,11 @@ width: 180.3023223876953px;
 cursor: pointer;
 border-radius: 41.88704299926758px;
 /* padding: 10px 37px 10px 37px; */
-background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%);
+border: 2px solid transparent;
+/* background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%); */
+background:
+    linear-gradient(#1e1e1e 0 0) padding-box, 
+    linear-gradient(267.95deg, #E78B3A 1%, #9B3AE7 98.56%) border-box;
 border-radius: 41.887px;
 font-family: 'Inter';
 font-style: normal;
@@ -113,7 +117,7 @@ line-height: 62px;
 .points{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 .point{
   width: 466px;
