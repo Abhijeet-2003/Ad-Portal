@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-// import style from '@/styles/Home.module.scss'
+import style from '@/styles/Home.module.scss'
 import Nav from '@/comps/nav'
 import AdImage from '@/comps/AdImage'
 import Girl from '@/assets/girl.svg'
@@ -28,8 +28,8 @@ export default function Home() {
               <div className={styles.be_text}>Be an</div>
               <div className={styles.be_buttons}>
 
-                <div className={styles.be_button}><div>Advertiser</div></div>
-                <div className={styles.be_button}><div>Advertiser</div></div>
+                <div className={style.be_button}><div>Advertiser</div></div>
+                <div className={style.be_button}><div>Advertiser</div></div>
 
               </div>
             </div>
