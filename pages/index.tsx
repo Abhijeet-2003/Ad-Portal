@@ -8,6 +8,7 @@ import AdImage from '@/comps/AdImage'
 import Girl from '@/assets/girl.svg'
 import SitGirl from '@/assets/sitGirl.svg'
 import bullet from '@/assets/bullet.svg'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +29,7 @@ export default function Home() {
               <div className={styles.be_text}>Be an</div>
               <div className={styles.be_buttons}>
 
-                <div className={style.be_button}><div>Advertiser</div></div>
+              <Link href='/advertisee_desc'><div className={style.be_button}><div>Advertisee</div></div></Link>
                 <div className={style.be_button}><div>Advertiser</div></div>
 
               </div>
