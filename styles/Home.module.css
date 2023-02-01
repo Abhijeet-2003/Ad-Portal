@@ -84,14 +84,16 @@ font-weight: 600;
 font-size: 20.9435px;
 line-height: 150%;
 /* or 31px */
-
+text-decoration: none;
 
 /* Light/BG/White */
 
 color: #FFFFFF;
 
 }
-
+.be a{
+  text-decoration: none;
+}
 .cont2{
   display: flex;
   align-items: center;

@@ -7,6 +7,11 @@
     line-height: 25px;
     cursor: pointer;
     padding: 7px 15px;
+    border: 1px solid transparent;
+/* background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%); */
+background:
+    linear-gradient(#1e1e1e 0 0) padding-box, 
+    linear-gradient(267.95deg, #E78B3A 1%, #9B3AE7 98.56%) border-box;
     border-radius: 41.88704299926758px;
     z-index: 5;
     outline: none;
