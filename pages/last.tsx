@@ -31,13 +31,8 @@ export default function Home() {
             <div className={styles.h_try_content}>You don’t want to let new members in your community turn inactive. Let the Foinbok bot take care of it.</div>
             <div className={styles.h_try_button}><span>Try DaoManager</span></div>
           </div>
-
-         
-          
         </div>
-        <div className={styles.h_down_svg}>
-            
-            </div>
+        <div className={styles.h_down_svg}></div>
       </div>
     </div>
   )

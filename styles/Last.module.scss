@@ -4,7 +4,7 @@
 
 @keyframes rotate {
 	100% {
-		transform: rotate(2turn);
+		transform: rotate(8turn);
 	}
 }
 
@@ -39,10 +39,11 @@ top: -10px;
 		content: '';
 		position: absolute;
 		z-index: -2;
-		left: -10%;
-		top: -130%;
-		width: 120%;
-		height: 320%;
+		left: -13%;
+		top: -40%;
+		width: 1294px;
+		height: 1294px;
+		border-radius: 50%;
 		// background-color: #1e1e1e;
 		background-repeat: no-repeat;
 		background-size: 50% 50%, 50% 50%;

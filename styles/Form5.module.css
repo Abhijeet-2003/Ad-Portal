@@ -90,6 +90,8 @@ color: #FFFFFF;
     -webkit-appearance: none;
     width: 462px;
     border-radius: 50px;
+    /* background: #3E3D3D; */
+    /* overflow: hidden; */
 /* height: 23px; */
 }
 .range_cont input[type=range]:focus{
@@ -104,6 +106,7 @@ border-radius: 50px;
 height: 8px;
 }
 .range_cont input[type=range]::-webkit-slider-thumb {
+  /* cursor: ew-resize; */
     position: relative;
     bottom: 8px;
     -webkit-appearance: none;
@@ -120,7 +123,7 @@ border: 8px solid #FFFFFF
 
   /* bubble */
 
-  .range_value{
+  /* .range_value{
     position: absolute;
     top: -50%;
   }
@@ -150,7 +153,7 @@ border: 8px solid #FFFFFF
     left: 50%;
     margin-left: -5px;
     margin-top: -1px;
-  }
+  } */
 
   /* bubbleeeee */
 

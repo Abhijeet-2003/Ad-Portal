@@ -6,8 +6,8 @@ import { useState, useRef, useEffect } from 'react';
 import line from '@/assets/line.svg'
 
 const Form5 = () => {
-    let [val,setVal] = useState(0);
-    let [total,setTotal] = useState(0.024)
+    let [val,setVal] = useState(0.255);
+    let [total,setTotal] = useState(0.279)
 
     const ref = useRef<HTMLInputElement>(null);
 
@@ -59,8 +59,8 @@ const Form5 = () => {
                 {/* <div className={styles.range_value} id="rangeV" ref={ref} ><span>34</span></div> */}
                 <input type='range' id='range' className={styles.range} min='0' max='100' onChange={(e)=> valChange(e.target.value)} />
                 <div className={styles.label_cont}>
-                    <div className={styles.label}>0.01ETH</div>
-                    <div className={styles.label}>0.5ETH</div>
+                    <div className={styles.label}>0.01 ETH</div>
+                    <div className={styles.label}>0.5 ETH</div>
                 </div>
                 <div className={styles.represent}>*This is currently just for representational purposes</div>
             </div>
