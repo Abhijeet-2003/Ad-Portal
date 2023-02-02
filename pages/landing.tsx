@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 const Landing = () => {
     const [windowDefined, setWindowDefined] = useState(false);
     const [connected, setConnected] = useState(false);
-    // const 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             setWindowDefined(true);
