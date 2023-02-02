@@ -11,7 +11,7 @@ const Landing = () => {
         if (typeof window !== 'undefined') {
             setWindowDefined(true);
             if (window.ethereum.selectedAddress) {
-                window.location.href = '/form3';
+                window.location.href = '/form2';
                 setConnected(true);
             }
         }

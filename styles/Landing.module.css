@@ -58,11 +58,21 @@ font-size: 20.9435px;
 line-height: 150%;
 cursor: pointer;
 }
+.conn_button:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+}
 .text{
     font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 18px;
+}
+
+.cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cont2 img{
     width: 500px;
