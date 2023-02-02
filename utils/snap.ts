@@ -16,9 +16,11 @@ export const getSnaps = async (): Promise<GetSnapsResponse> => {
  * Connect to metamask
  */
 export const connectMetamask = async () => {
-  await window.ethereum.request({
-    method: 'eth_requestAccounts'
-  })
+  if (window?.ethereum) {
+    await window.ethereum.request({
+      method: 'eth_requestAccounts'
+    })
+  }
 }
 
 /**
