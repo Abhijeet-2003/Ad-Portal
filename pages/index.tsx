@@ -30,7 +30,7 @@ export default function Home() {
               <div className={styles.be_buttons}>
 
               <Link href='/advertisee_desc'><div className={style.be_button}><div>Advertisee</div></div></Link>
-                <div className={style.be_button}><div>Advertiser</div></div>
+              <Link href='/landing'><div className={style.be_button}><div>Advertiser</div></div></Link>
 
               </div>
             </div>
