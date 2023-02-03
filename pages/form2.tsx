@@ -45,7 +45,7 @@ const Form2 = () => {
                         Authorization: `Bearer ${process.env.NEXT_PUBLIC_PINATA_JWT}`
                     },
                 })
-                window.location.href = `/form3?cid=${resFile.data.IpfsHash}}`
+                window.location.href = `/form3?cid=${resFile.data.IpfsHash}`
             } catch (error) {
                 console.log('Error: ', error)
             }
