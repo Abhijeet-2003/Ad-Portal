@@ -157,6 +157,7 @@ border: 8px solid #FFFFFF
     width: 100px;
     color: #FFFFFF;
     top: -50%;
+    left: calc(50% + -30px);
   }
   /*.range_value span{
     width: 30px;
