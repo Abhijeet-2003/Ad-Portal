@@ -7,6 +7,7 @@ import pic_drag from '@/assets/pic_drag.svg'
 import { useState, useCallback, FormEvent } from 'react';
 import axios from 'axios';
 import { useDropzone } from 'react-dropzone';
+import Router from 'next/router';
 
 
 
@@ -45,7 +46,11 @@ const Form2 = () => {
                         Authorization: `Bearer ${process.env.NEXT_PUBLIC_PINATA_JWT}`
                     },
                 })
-                window.location.href = `/form3?cid=${resFile.data.IpfsHash}`
+                
+                Router.push({
+                    pathname: '/form3',
+                    query: { cid: resFile.data.IpfsHash }
+                })
             } catch (error) {
                 console.log('Error: ', error)
             }
