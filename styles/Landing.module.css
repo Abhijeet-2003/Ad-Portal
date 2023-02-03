@@ -42,7 +42,9 @@ line-height: 25px;
 }
 .conn_button{
     padding: 10.4718px 36.6512px;
-
+display: flex;
+justify-content: center;
+align-items: center;
 width: 155px;
 height: 30.94px;
 
