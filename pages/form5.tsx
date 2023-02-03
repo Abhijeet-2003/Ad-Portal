@@ -21,9 +21,9 @@ const Form5 = () => {
     const valChange = (num:string) => {
         let n= Number(num);
         let final = n*(0.5-0.01)/100 + 0.01;
-        setVal(Number(final).toFixed(3));
+        setVal(+final.toFixed(3));
         let total = Number(final.toFixed(3))+0.024;
-        setTotal(Number(total).toFixed(3));
+        setTotal(+total.toFixed(3));
 
         // const
         // rangeV = ref.current,
@@ -62,7 +62,7 @@ const Form5 = () => {
                     <div className={styles.label}>0.01 ETH</div>
                     <div className={styles.label}>0.5 ETH</div>
                 </div>
-                <div className={styles.represent}>*This is currently just for representational purposes</div>
+                <div className={styles.represent}>*This is currently just for representational purposes. Right now it will charge gas fee only.</div>
             </div>
 
             <div className={styles.money_top_cont}>
