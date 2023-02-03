@@ -13,9 +13,10 @@ const Form5 = () => {
 
     // useEffect(() => {
     //     const element = ref.current;
-    //     console.log(element);
-    //     console.log(element.id);
-    //   }, []);
+    //     if(element){
+    //         element.style.left = `${Number(val/4)}px`;
+    //     } 
+    //   });
     
 
     const valChange = (num:string) => {
@@ -25,15 +26,13 @@ const Form5 = () => {
         let total = Number(final.toFixed(3))+0.024;
         setTotal(+total.toFixed(3));
 
-        // const
-        // rangeV = ref.current,
-        // setValue = ()=>{
-        //     const
-        //     newValue = Number( (n - 0) * 100 / (100 - 0) ),
-        //     newPosition = 10 - (newValue * 0.2);
-        //     rangeV!.innerHTML = `<span>${Number(final).toFixed(3)} ETH</span>`;
-        //     rangeV!.style.left = `calc(${newValue}% + (${newPosition}px))`;
-        // };
+        const
+        rangeV = ref.current;
+            const
+            newValue = Number( (n - 0) * 100 / (100 - 0) ),
+            newPosition = 10 - (newValue * 0.2) - 30;
+            // rangeV!.innerHTML = `<span>${Number(final).toFixed(3)} ETH</span>`;
+            rangeV!.style.left = `calc(${newValue}% + (${newPosition}px))`;
         
     }
 
@@ -56,8 +55,8 @@ const Form5 = () => {
             <div className={styles.consider}>Consider what you're advertising, and enter the most relevant page of your website. This might be your homepage, or  a more specific page.</div>
 
             <div className={styles.range_cont}>
-                {/* <div className={styles.range_value} id="rangeV" ref={ref} ><span>34</span></div> */}
                 <input type='range' id='range' className={styles.range} min='0' max='100' onChange={(e)=> valChange(e.target.value)} />
+                <div className={styles.range_value} id="rangeV" ref={ref}>{val} ETH</div>
                 <div className={styles.label_cont}>
                     <div className={styles.label}>0.01 ETH</div>
                     <div className={styles.label}>0.5 ETH</div>

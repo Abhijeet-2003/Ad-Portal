@@ -68,6 +68,8 @@ color: #FFFFFF;
     gap: 8px;
     align-items: center;
     margin-top: 62px;
+    position: relative;
+    /* width: 500px; */
 }
 .label_cont{
     width: 462px;
@@ -123,11 +125,18 @@ border: 8px solid #FFFFFF
 
   /* bubble */
 
-  /* .range_value{
+   .range_value{
     position: absolute;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13.6962px;
+    line-height: 17px;
+    max-height: 20px;
+    width: 100px;
+    color: #FFFFFF;
     top: -50%;
   }
-  .range_value span{
+  /*.range_value span{
     width: 30px;
     height: 24px;
     line-height: 24px;
