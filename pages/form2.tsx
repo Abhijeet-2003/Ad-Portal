@@ -36,7 +36,7 @@ const Form2 = () => {
                 cidVersion: 0,
             })
             formData.append('pinataOptions', options);
-            console.log("Running")
+            console.log("Uploading file to IPFS...")
             try {
                 const resFile = await axios.post('https://api.pinata.cloud/pinning/pinFileToIPFS', formData, {
                     maxBodyLength: Infinity,
