@@ -28,7 +28,7 @@ const Form2 = () => {
             formData.append('file', fileImg);
 
             const metadata = JSON.stringify({
-                name: 'Sample File Name',
+                name: `${fileImg.name}`,
             });
             formData.append('pinataMetadata', metadata);
 
