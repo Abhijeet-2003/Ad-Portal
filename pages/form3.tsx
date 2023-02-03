@@ -2,14 +2,24 @@ import Nav from '@/comps/nav';
 import styles from '@/styles/Form3.module.css'
 import arrow from '@/assets/arrow.svg'
 import Link from 'next/link';
-import { useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Form3 = () => {
+    const router = useRouter();
+    console.log("Content ID: ", router.query.cid)
 
     let [heading,setHeading] = useState('Heading');
     let [body,setBody] = useState('Body');
     let [cta, setCta] = useState('CTA');
 
+    const proceedToNext = (e: SyntheticEvent) => {
+        e.preventDefault();
+        router.push({
+            pathname: '/form4',
+            query: { cid: router.query.cid, heading: heading, body: body, cta: cta }
+        })
+    }
     return (
         <div className={styles.form3}>
             <Nav/>
@@ -45,7 +55,7 @@ const Form3 = () => {
                         </div>
                     </div>
 
-                    <div className={styles.proc_button}><Link href='/form4'>Proceed to Ad</Link></div>
+                    <button className={styles.proc_button} onClick={proceedToNext}>Proceed to Ad</button>
                 </div>
 
             </div>
