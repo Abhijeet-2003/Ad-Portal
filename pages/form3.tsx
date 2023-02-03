@@ -28,8 +28,7 @@ const Form3 = () => {
                 <Link href='/form2'><img src={arrow.src} alt=""/></Link>
                 <div className={styles.bars}>
                     <div></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
+                    <div></div>
                     <div className={styles.bar}></div>
                     <div className={styles.bar}></div>
                 </div>

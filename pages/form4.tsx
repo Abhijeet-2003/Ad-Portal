@@ -24,9 +24,8 @@ const Form4 = () => {
                 <Link href='/form3'><img src={arrow.src} alt=""/></Link>
                 <div className={styles.bars}>
                     <div></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
+                    <div></div>
+                    <div></div>
                     <div className={styles.bar}></div>
                 </div>
             </div>

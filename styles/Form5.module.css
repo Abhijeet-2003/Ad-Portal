@@ -31,6 +31,28 @@ background: linear-gradient(89.84deg, #9C3BE6 0.85%, #AF4FBD 99.88%);
 border-radius: 3.66912px;
 
 }
+.bars div:nth-child(2){
+  width: 88px;
+height: 7px;
+
+background: linear-gradient(89.84deg, #AF4FBD 0.85%, #C16393 99.88%);
+border-radius: 3.66912px;
+}
+.bars div:nth-child(3){
+  width: 88px;
+height: 7px;
+
+background: linear-gradient(89.84deg, #C26392 0.85%, #D47768 99.88%);
+border-radius: 3.66912px;
+}
+.bars div:nth-child(4){
+  width: 88px;
+height: 7px;
+
+background: linear-gradient(89.84deg, #D57866 0.85%, #E78B3D 99.88%);
+border-radius: 3.66912px;
+
+}
 .bar{
     width: 87px;
 height: 7px;

@@ -68,7 +68,6 @@ const Form2 = () => {
                     <div className={styles.bar}></div>
                     <div className={styles.bar}></div>
                     <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
                 </div>
             </div>
 

@@ -44,10 +44,9 @@ const Form5 = () => {
                 <Link href='/form4'><img src={arrow.src} alt=""/></Link>
                 <div className={styles.bars}>
                     <div></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
 
