@@ -228,6 +228,7 @@ color: #FFFFFF;
     justify-content: center;
     align-items: center;
     /* padding: 8px 28px; */
+    border: none;
     background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%);
 border-radius: 32px;
 width: 178px;
