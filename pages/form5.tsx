@@ -84,7 +84,7 @@ const Form5 = () => {
                 <div className={styles.money}>{total} ETH</div>
             </div>
 
-            <div className={styles.proc_button}><Link href='#'>Proceed to Pay</Link></div>
+            <button className={styles.proc_button}>Proceed to Pay</button>
 
 
         </div>
