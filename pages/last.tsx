@@ -7,6 +7,9 @@ import Nav from '@/comps/nav'
 import AdImage from '@/comps/AdImage'
 import Bottom from '@/assets/bottom2.svg'
 import Img from '@/assets/img.svg'
+import alert from '@/assets/alert.svg'
+import ad from '@/assets/ad.svg'
+import { useRef } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,12 +18,6 @@ export default function Home() {
     <div className={styles.home}>
 
       <Nav/>
-
-      <div className={styles.h_ad_content}>
-        
-
-        
-      </div>
 
       <div className={styles.h_down_cont}>
         <div className={style.h_try_cont}>
@@ -31,9 +28,23 @@ export default function Home() {
             <div className={styles.h_try_content}>You don’t want to let new members in your community turn inactive. Let the Foinbok bot take care of it.</div>
             <div className={styles.h_try_button}><span>Try DaoManager</span></div>
           </div>
+
+          <div className={styles.h_down_svg}>
+            <div className={styles.why_cont}>
+              <img src={alert.src} alt="" className={styles.i}  />
+              <span className={styles.ad_content}>Your ads may be based on other advertiser choices, your profile and activities - like websites you visit and ads you interact with - as well as other information not listed here.</span>
+              <div className={styles.why}>Why am I seeing this Ad</div>
+            </div>
+
+            <div className={styles.ad_cont}>
+              <img src={ad.src} alt="" />
+              <div className={styles.by}>by DaoLens</div>
+            </div>
+          </div>
+
         </div>
-        <div className={styles.h_down_svg}></div>
       </div>
+
     </div>
   )
 }

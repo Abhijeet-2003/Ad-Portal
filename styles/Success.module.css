@@ -34,21 +34,21 @@
     justify-content: center;
     align-items: center;
     /* font-weight: 600; */
-    height: 51.943519592285156px;
-    width: 205.3023223876953px;
+    height: 30.943519592285156px;
+    width: 132.0023223876953px;
     border-radius: 41.88704299926758px;
-    padding: 8px 33px 8px 33px;
+    padding: 10.4718px 36.6512px;
     background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 25.9435px;
+    font-size: 20.9435px;
     line-height: 150%;
     color: #FFFFFF;
     cursor: pointer;
 }
 .profile:hover{
-    outline: 1px solid white;
+    box-shadow: 22px 4px 40px rgba(231, 139, 58, 0.12), -27px 0px 40px rgba(195, 98, 255, 0.11);
 }
 .check{
     font-family: 'Quicksand';
