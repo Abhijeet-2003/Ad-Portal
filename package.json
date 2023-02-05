@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@metamask/detect-provider": "^2.0.0",
     "@next/font": "13.1.5",
     "@pinata/sdk": "^2.1.0",
     "@types/node": "18.11.18",
