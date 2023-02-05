@@ -139,10 +139,10 @@ height: 8px;
     width: 23px;
     height: 23px;
     border-radius: 50%; 
-    background: #FFFFFF;
+    background: transparent;
     cursor: pointer;
-    background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%),
-linear-gradient(0deg, #FFFFFF, #FFFFFF);
+    /* background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%),
+linear-gradient(0deg, #FFFFFF, #FFFFFF); */
 border: 8px solid #FFFFFF
   }
 
