@@ -112,6 +112,7 @@ color: #FFFFFF;
 }
 .range_cont input[type=range]{
     -webkit-appearance: none;
+    appearance: none;
     width: 462px;
     border-radius: 50px;
     /* background: #3E3D3D; */

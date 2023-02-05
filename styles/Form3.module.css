@@ -203,6 +203,7 @@ font-weight: 600;
 font-size: 16px;
 line-height: 150%;
 cursor: pointer;
+border: none;
 }
 .proc_button a{
     text-decoration: none;
