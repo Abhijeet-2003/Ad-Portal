@@ -48,7 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 cidVersion: 0 as const,
             }
         }
-        await pinata.pinFileToIPFS(readStream, options)
+        await pinata.pinFromFS(path.join(process.cwd())+'/temp.txt', options)
             .then((result) => {
                 console.log("File uploaded successfully to IPFS")
                 res.status(200).json({ hash: result.IpfsHash, message: 'Success', error: false })
