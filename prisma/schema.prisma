@@ -14,9 +14,12 @@ model Count {
   purchasedViews  Int
   status          Boolean
   transactionHash String
+  hashId          String
+  hash            Hash    @relation(fields: [hashId], references: [ethAddress])
 }
 
 model Hash {
-  id         String @id @default(auto()) @map("_id") @db.ObjectId
-  ethAddress String
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  ethAddress String  @unique
+  counts     Count[]
 }
