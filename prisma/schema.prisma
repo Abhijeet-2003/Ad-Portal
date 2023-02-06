@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model counts {
+model Count {
   id              String  @id @default(auto()) @map("_id") @db.ObjectId
   contentId       String
   count           Int
@@ -16,7 +16,7 @@ model counts {
   transactionHash String
 }
 
-model hashes {
+model Hash {
   id         String @id @default(auto()) @map("_id") @db.ObjectId
   ethAddress String
 }
