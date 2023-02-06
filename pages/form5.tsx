@@ -74,6 +74,7 @@ const Form5 = () => {
             if (typeof window !== 'undefined') {
                 const origin = window.location.origin;
                 const response = await axios.post(`${origin}/api/uploadTxHash`, {
+                    contentId: router.query.hash,
                     ethAddress: window.ethereum.selectedAddress,
                     txHash: res.transactionHash,
                     purchasedViews: 5000
