@@ -4,6 +4,7 @@ import Nav from "@/comps/nav";
 import AdsListCard from "@/comps/adsListCard";
 import Metrics from "@/comps/metrics";
 import styles from '@/styles/adsDash.module.scss';
+import metamaskLogo from '@/assets/metamask-logo.png';
 
 export default function adsDash() {
     
@@ -13,7 +14,7 @@ export default function adsDash() {
             <div className={styles.infoWrapper}>
                 <div className={styles.infoCard}>
                     <div className={styles.metamaskLogo}>
-                        <img src="https://metamask.io/images/metamask-logo.png" />
+                        <img src={metamaskLogo.src} />
                     </div>
                     <div className={styles.info}>
                         <h1>Metamask Ad</h1>
