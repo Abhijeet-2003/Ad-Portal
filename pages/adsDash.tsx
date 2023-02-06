@@ -1,12 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MetaMaskContext } from "@/hooks";
 import Nav from "@/comps/nav";
 import AdsListCard from "@/comps/adsListCard";
 import Metrics from "@/comps/metrics";
 import styles from '@/styles/adsDash.module.scss';
 import metamaskLogo from '@/assets/metamask-logo.png';
+import axios from "axios";
 
 export default function adsDash() {
+    const [ads, setAds] = useState([]);
+    const fetchAds = async () => {
+        if (typeof window !== 'undefined') {
+            const origin = window.location.origin;
+            const response = await axios.get(`${origin}/api/fetchAds`, {
+                params: {
+                    hashId: window.ethereum.selectedAddress
+                }
+            });
+            // console.log(response.data.ads);
+            setAds(response.data.ads);
+        }
+    }
+    console.log(ads)
+    
+    useEffect(() => {
+        fetchAds();
+    }, [])
     
     return (
         <>
@@ -27,7 +46,17 @@ export default function adsDash() {
             <div className={styles.adsWrapper}>
                 <div className={styles.adsList}>
                     <h1>Ads posted</h1>
-                    <AdsListCard />
+                    {ads.map((ad: {ad: {}, adImage: string, adName: string}, index) => {
+                        return (
+                            <AdsListCard 
+                                key={index}
+                                title={ad.adName}
+                                image={ad.adImage}
+                            />
+                        )
+                    })
+                    }
+                    {/* <AdsListCard /> */}
                 </div>
                 <div className={styles.metricsWrapper}>
                     <h1>Metrics</h1>
