@@ -4,8 +4,17 @@ import styles from '@/styles/Form5.module.css'
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import line from '@/assets/line.svg'
+import { nftAddress, nftAbi } from "@/constants";
+import { useRouter } from 'next/router';
+import detectEthereumProvider from '@metamask/detect-provider';
+import { Contract, providers } from 'ethers';
+import { ExternalProvider } from '@ethersproject/providers';
+import axios from 'axios';
 
 const Form5 = () => {
+    const router = useRouter();
+    console.log(`https://gateway.pinata.cloud/ipfs/${router.query.hash}`)
+
     let [val,setVal] = useState(0.255);
     let [total,setTotal] = useState(0.279)
 
@@ -34,6 +43,54 @@ const Form5 = () => {
             // rangeV!.innerHTML = `<span>${Number(final).toFixed(3)} ETH</span>`;
             rangeV!.style.left = `calc(${newValue}% + (${newPosition}px))`;
         
+    }
+
+    const getProviderorSigner = async (needSigner = false) => {
+        if (window.ethereum) {
+            const provider = await detectEthereumProvider();
+            const web3Provider = new providers.Web3Provider(provider as ExternalProvider);
+        
+            const { chainId } = await web3Provider.getNetwork();
+            if (chainId !== 80001) {
+                window.alert("Change the network to Mumbai");
+                throw new Error("Change network to Mumbai");
+            }
+        
+            if (needSigner) {
+                const signer = web3Provider.getSigner();
+                console.log(signer)
+                return signer;
+            }
+            return web3Provider;
+        }
+    }
+
+    const proceedToPayment = async () => {
+        const signer = await getProviderorSigner(true);
+        const nftContract = new Contract(nftAddress, nftAbi, signer);
+        const tx = await nftContract.mint(`https://gateway.pinata.cloud/ipfs/${router.query.hash}`);
+        await tx.wait().then(async (res: any) => {
+            console.log('Transaction Hash', res.transactionHash);
+            if (typeof window !== 'undefined') {
+                const origin = window.location.origin;
+                const response = await axios.post(`${origin}/api/uploadTxHash`, {
+                    ethAddress: window.ethereum.selectedAddress,
+                    txHash: res.transactionHash,
+                    purchasedViews: 5000
+                },
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                console.log(response);
+                if (response.data.message === 'Success') {
+                    router.push({
+                        pathname: '/success'
+                    })
+                }
+            }
+        });
     }
 
     return (
@@ -84,7 +141,7 @@ const Form5 = () => {
                 <div className={styles.money}>{total} ETH</div>
             </div>
 
-            <button className={styles.proc_button}>Proceed to Pay</button>
+            <button className={styles.proc_button} onClick={proceedToPayment}>Proceed to Pay</button>
 
 
         </div>
