@@ -11,6 +11,9 @@ export default function adsDash() {
     const [ads, setAds] = useState([]);
     const fetchAds = async () => {
         if (typeof window !== 'undefined') {
+            if (window.ethereum.selectedAddress === null) {
+                window.location.href = '/landing';
+            }
             const origin = window.location.origin;
             const response = await axios.get(`${origin}/api/fetchAds`, {
                 params: {
@@ -21,7 +24,7 @@ export default function adsDash() {
             setAds(response.data.ads);
         }
     }
-    console.log(ads)
+    // console.log(ads)
     
     useEffect(() => {
         fetchAds();
